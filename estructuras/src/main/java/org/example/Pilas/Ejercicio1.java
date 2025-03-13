@@ -1,4 +1,4 @@
-package org.example.EjerciciosPilas;
+package org.example.Pilas;
 
 import java.util.Stack;
 
