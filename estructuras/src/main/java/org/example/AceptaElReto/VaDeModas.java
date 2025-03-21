@@ -1,22 +1,44 @@
 package org.example.AceptaElReto;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class VaDeModas {
 
     static java.util.Scanner in;
 
     public static boolean casoDePrueba() {
-        int num = in.nextInt();
-        if (num==0) {
+        int numero = in.nextInt();
+        in.nextLine();
+
+        if (numero==0) {
             return false;
         } else {
-            String string = in.nextLine();
-            String[] split = string.split(" ");
-            HashMap<String, Integer> mapaNumeros = new HashMap<>();
-            for (String numero : mapaNumeros){
+            String numeros = in.nextLine();
+            String[] numeros_vector = numeros.split(" ");
+
+            Map<String,Integer> mapaNumeros = new HashMap<>();
+
+            Integer max = 0;
+            String clave_max = "0";
+
+            for (String num : numeros_vector) {
+
+                if (mapaNumeros.containsKey(num)) {
+                    mapaNumeros.put(num, mapaNumeros.get(num) + 1);
+                } else {
+                    mapaNumeros.put(num, 1);
+                }
+
+                if (max < mapaNumeros.get(num)) {
+                    max = mapaNumeros.get(num);
+                    clave_max = num;
+                }
 
             }
+
+            System.out.println(clave_max);
+
             return true;
         }
     }
