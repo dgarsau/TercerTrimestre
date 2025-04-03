@@ -53,4 +53,4 @@ Contiene un atributo estático de tipo Cliente para poder acceder a él desde to
 
 ## Pruebas
 
-
+![PRUEBAS](./Pruebas.mkv)
