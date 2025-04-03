@@ -47,7 +47,6 @@ public class AppZonaClientes {
         System.out.print("Contraseña:");
         String contrasenya = input.next();
 
-
         boolean autenticacion = false;
         for (Cliente ususario : clientes){
             if (ususario.getUsuario().equals(username) && ususario.getContrasenya().equals(contrasenya)){
