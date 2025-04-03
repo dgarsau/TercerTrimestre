@@ -17,4 +17,9 @@ public enum Producto {
     Producto(double precio){
         this.precio = precio;
     }
+
+    public double getPrecio() {
+        return precio;
+    }
+
 }

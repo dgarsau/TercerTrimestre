@@ -16,6 +16,22 @@ public class Cliente {
         promociones = false;
     }
 
+    public Pedido getPedido() {
+        return pedido;
+    }
+
+    public void setPedido(Pedido pedido) {
+        this.pedido = pedido;
+    }
+
+    public boolean isPromociones() {
+        return promociones;
+    }
+
+    public void setPromociones(boolean promociones) {
+        this.promociones = promociones;
+    }
+
     public String getUsuario() {
         return usuario;
     }
@@ -30,6 +46,10 @@ public class Cliente {
 
     public void setContrasenya(String contrasenya) {
         this.contrasenya = contrasenya;
+    }
+
+    public String getDireccion() {
+        return direccion;
     }
 
     @Override
