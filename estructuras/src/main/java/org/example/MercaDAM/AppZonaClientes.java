@@ -28,13 +28,11 @@ public class AppZonaClientes {
 
         if (auth){
             iniciarCompra();
+            resumenCarrito();
+            menuFinal();
         }else{
             System.out.println("ERROR DE AUTENTICACIÓN.");
         }
-
-        resumenCarrito();
-        menuFinal();
-
 
 
     }
@@ -104,8 +102,12 @@ public class AppZonaClientes {
         System.out.println("[3]. Eliminar productos.\n");
         System.out.println("[X]. Terminar pedido.\n");
 
-
+        System.out.println("\n============================================\n");
+        System.out.print("Introduce tu elección: ");
         char eleccion_menu = input.next().toUpperCase().charAt(0);
+        System.out.println("\n============================================\n");
+
+
         switch (eleccion_menu){
             case '1':
                 if (cliente.isPromociones()){

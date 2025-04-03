@@ -1,0 +1,70 @@
+@startuml
+
+package org.example.MercaDAM {
+
+    class AppZonaClientes {
+            - static Scanner input
+            - static Cliente cliente
+            + static void main(String[] args)
+            + static boolean autentication(List<Cliente> clientes)
+            + static void iniciarCompra()
+            + static void menuFinal()
+            + static void imprimirProductos()
+            + static void resumenCarrito()
+            + static void imprimirDespedida()
+        }
+
+    class Cliente {
+        - String usuario
+        - String contrasenya
+        - String direccion
+        - Pedido pedido
+        - boolean promociones
+        + Cliente(String usuario, String contrasenya)
+        + Pedido getPedido()
+        + void setPedido(Pedido pedido)
+        + boolean isPromociones()
+        + void setPromociones(boolean promociones)
+        + String getUsuario()
+        + void setUsuario(String usuario)
+        + String getContrasenya()
+        + void setContrasenya(String contrasenya)
+        + String getDireccion()
+        + String toString()
+    }
+
+    class Mercadam {
+        - static Random random
+        - static List<Cliente> clientes
+        - static String caracteres
+        + void generarClientes()
+        + List<Cliente> getClientes()
+    }
+
+    class Pedido {
+        - Map<Producto, Integer> pedido
+        - double importe_total
+        + Pedido()
+        + void anyadirProducto(Producto producto)
+        + void eliminarProducto(Producto producto)
+        + void aplicarPromo3x2()
+        + void aplicarPromo10()
+        + Map<Producto, Integer> getPedido()
+        + double getImporte_total()
+    }
+
+    enum Producto {
+        MANZANAS(2.30), PAN(1.00), ARROZ(3.50), POLLO(4.30), LECHE(1.30), ACEITE(8.30), HUEVOS(3.30), TOMATES(4.00), PASTA(0.89)
+        - double precio
+        + Producto(double precio)
+        + double getPrecio()
+    }
+
+    AppZonaClientes o-- Cliente
+    AppZonaClientes --> Mercadam
+    Cliente *-- Pedido
+    Mercadam *-- Cliente
+
+}
+
+@enduml
