@@ -21,7 +21,7 @@ public class Mantenimiento {
             stmt = conexion.createStatement();
             respuesta = stmt.executeQuery(query);
 
-            while (respuesta.next()){ //recorremos todas las filas existentes en la tabla
+            while (respuesta.next()){
                 listaEstudiantes.add(new Estudiante(respuesta.getInt("nia"),
                         respuesta.getString("nombre"),
                         respuesta.getDate("fecha_nacimiento").toLocalDate()));
