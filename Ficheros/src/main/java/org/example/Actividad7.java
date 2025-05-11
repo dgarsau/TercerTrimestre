@@ -16,21 +16,21 @@ public class Actividad7 {
         String palabra = input.next();
 
         try {
-            File archivo = new File("src/main/resources/datos_personas.txt");
+            File archivo = new File("src/main/resources/datos.txt");
             Scanner lector = new Scanner(archivo);
 
-            while (lector.hasNextLine()) {
-                String linea = lector.nextLine();
-                linea = linea.replaceAll("[^A-Za-z ]", "");
 
-                String[] vector = linea.split(" ");
+            while (lector.hasNext()) {
 
-                for (String p : vector){
-                    if (p.equalsIgnoreCase(palabra)){
-                        contador++;
-                    }
+                String p = lector.next().replaceAll("[^A-Za-z ]", "");
+
+                if (p.equalsIgnoreCase(palabra)) {
+                    contador++;
                 }
+
             }
+
+
 
             System.out.println("La palabra " + palabra + " aparece " + contador + " veces.");
 
