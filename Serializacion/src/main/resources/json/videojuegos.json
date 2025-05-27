@@ -1,0 +1,39 @@
+[
+  {
+    "nombre": "Elden Ring",
+    "plataforma": "PS5",
+    "precio": 59.95,
+    "disponible": true,
+    "generos": [
+      "Accion",
+      "Aventura"
+    ]
+  },
+  {
+    "nombre": "Disco Elysium",
+    "plataforma": "PC",
+    "precio": 29.95,
+    "disponible": true,
+    "generos": [
+      "Rol"
+    ]
+  },
+  {
+    "nombre": "Project Zomboid",
+    "plataforma": "PC",
+    "precio": 19.95,
+    "disponible": true,
+    "generos": [
+      "Supervivencia"
+    ]
+  },
+  {
+    "nombre": "Animal Crossing",
+    "plataforma": "Nintendo Switch",
+    "precio": 49.95,
+    "disponible": false,
+    "generos": [
+      "Simulacion"
+    ]
+  }
+]

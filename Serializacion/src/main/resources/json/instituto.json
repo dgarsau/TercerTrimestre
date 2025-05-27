@@ -1,0 +1,23 @@
+{
+  "estudiantes" : [
+    {
+      "nombre":"Juan",
+      "curso":"1DAM"
+    },
+    {
+      "nombre":"María",
+      "curso":"1DAW"
+    }
+  ],
+  "profesores": [
+    {
+      "nombre":"Patricia",
+      "modulos" : ["Programación","Tutoría"]
+    },
+    {
+      "nombre":"Paco",
+      "modulos":["Sistemas","Hardware"]
+    }
+
+  ]
+}
